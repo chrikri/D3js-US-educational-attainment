@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Educational Attainment in the United States</title>
 	<script type="text/javascript" src="sound-mouseover.js"></script>
+	<script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -82,7 +83,17 @@
    Should be equal the the height of the header
  */
 </script>
-
+<script>
+$(document).ready(function(){
+    $("h1, h2, label").mouseenter(function(){
+		responsiveVoice.cancel(); 
+  		responsiveVoice.speak($(this).text(), 'UK English Male');
+});
+    $("h1, h2, label").mouseleave(function(){
+        responsiveVoice.cancel();
+    	});
+});
+</script>
 </body>
  <audio>
 	<source src="toy_bricks_wooden_movement_005.mp3">
