@@ -55,7 +55,7 @@ header h1 {
 }
 
 .navbar-toggler-icon{
-	position: right;
+	margin: 0 auto;
 }
 
 body {
