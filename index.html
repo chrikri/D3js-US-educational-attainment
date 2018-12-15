@@ -38,6 +38,13 @@
         </nav>
     </header>
 <body>
+	<script type="text/javascript">
+	$(window).resize(function(){
+		if(window.innerWidth > 768) {
+			$("#nav").removeAttr("style");
+		}
+	});
+        </script>
     <h1 class="title">Educational Attainment in the United States</h1>
         
 	<div class="hide" id="nationwide">
