@@ -27,7 +27,7 @@
 	
 	</button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav navbar-right" id="nav">
+    <ul class="navbar-nav navbar-right" >
       <li class="nav-item active"><a class="nav-link" href="#top"onmouseover="playclip();" >Top</a></li>
       <li class="nav-item active"><a class="nav-link" href="#national"onmouseover="playclip();" onclick="showhide('nationwide');">National</a></li>
       <li class="nav-item active"><a class="nav-link" href="#regional"onmouseover="playclip();"onclick="showhide('regionlevel');">Regional</a></li>
@@ -41,7 +41,7 @@
 	<script type="text/javascript">
 	$(window).resize(function(){
 		if(window.innerWidth > 768) {
-			$("#nav").removeAttr("style");
+			$("#navbarResponsive").removeAttr("style");
 		}
 	});
         </script>
