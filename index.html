@@ -29,9 +29,9 @@
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav navbar-right">
       <li class="nav-item active"><a class="nav-link" href="#top"onmouseover="playclip();" >Top</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#national"onmouseover="playclip();">National</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#regional"onmouseover="playclip();">Regional</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#state"onmouseover="playclip();">State-Level</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#national"onmouseover="playclip();" onclick="showhide('nationwide');">National</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#regional"onmouseover="playclip();"onclick="showhide('regionlevel');">Regional</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#state"onmouseover="playclip();"onclick="showhide('statelevel');">State-Level</a></li>
     <ul>
    </div>
    </div>
@@ -40,11 +40,12 @@
 <body>
     <h1 class="title">Educational Attainment in the United States</h1>
         
-	
+	<div class="hide" id="nationwide">
 	<p><br></p>
     <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
 	
     <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
+	<div class="hide" id="regionlevel">
     <p><br><br><br></p>
     <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
 	
@@ -62,6 +63,7 @@
     </form>
 	<p></p>
     <div id="chart"></div>
+	<div class="hide" id="statelevel">
 	<a name="state"></a>
     <p><br><br></p>
     <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
@@ -111,6 +113,24 @@ $(document).ready(function(){
     	});
 });
 </script>
+	
+<script>
+	function showhide(id){
+	if (document.getElementById){
+		var divid = document.getElementById(id);
+        	var divs = document.getElementsByClassName("hide");
+          	 for(var i=0;i<divs.length;i++) {
+            		divs[i].style.display = "none";
+		 }
+		divid.style.display = "block";
+          }
+	return false;
+	}
+document.getElementById("regionlevel").style.display = "none";
+document.getElementById("statelevel").style.display = "none";
+	
+</script>
+	
 </body>
  <audio>
 	<source src="toy_bricks_wooden_movement_005.mp3">
